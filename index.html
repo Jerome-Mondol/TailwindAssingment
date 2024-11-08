@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark" id="htmlTag">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./output/main.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body class="bg-white dark:bg-gray-900 dark:text-white">
     <div class="main font-poppins">
       <div class="home">
         <div class="navBar flex justify-between px-10 container">
@@ -25,7 +25,7 @@
             >
               Register Interest
             </button>
-            <svg
+            <svg id="switch"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -80,7 +80,7 @@
 
           </div>
 
-          <div class="logos flex justify-between items-center flex-row bg-slate-100 mt-10 container">
+          <div class="logos flex justify-between items-center flex-row bg-slate-100 mt-10 container dark:bg-gray-900 dark:text-white">
             <div class="logo ml-32">Pave your path to career success by <br> gaining  a  professional <br> Google certificate with the support of C4U</div>
             <div class="logo ">
                 <img src="./img/Google.png" alt="">
@@ -200,7 +200,7 @@
         </div>
       </div>
 
-      <div class="courses bg-slate-100 px-32 container">
+      <div class="courses bg-slate-100 px-32 container dark:bg-gray-900">
         <h1 class="text-5xl font-semibold pt-10">There are 5 Courses in this <br> Professional Certificate</h1>
         <hr>
         <div class="courseContainer flex flex-row justify-center items-center h-40">
@@ -225,7 +225,7 @@
         <img src="./img/Connector Vector (1).png" class="mx-auto ">
     </div>
     <div class="course3 container">
-        <img src="./img/Group 238903.png" class="mx-auto ">
+        <img src="./img/Group 238904.png" class="mx-auto ">
         <img src="./img/Connector Vector (1).png" class="mx-auto">
     </div>
     <div class="course4 container">
@@ -236,9 +236,9 @@
         <img src="./img/Group 238907.png" class="mx-auto ">
     </div>
 
-    <div class="upperFooter relative">
+    <div class="upperFooter relative ">
         <img src="./img/brooke-cagle-g1Kr4Ozfoac-unsplash 2.png" class="w-screen mt-40">
-        <div class="footerText flex justify-center items-left absolute flex-col top-40 left-40 bg-white rounded-lg p-10 gap-10">
+        <div class="footerText flex justify-center items-left absolute flex-col top-40 left-40 bg-white rounded-lg p-10 gap-10 dark:bg-gray-900 dark:text-white">
             <img src="./img/“.png" class="w-[40px]">
             <p class="text-2xl font-semibold">I worked in retail and needed to make a <br> change. The certificate is really <br> designed for you to go at your own <br> pace. This is something that anybody <br> can do</p>
             <span class="text-l font-semibold text-pink-300">Daniel, IT Support Specialist at Central Community <br> College and Google IT Support Certificate graduate</span>
@@ -287,7 +287,17 @@
     <div class="copyright flex justify-center items-center my-5">
         <p>All right reserved</p>
     </div>
-
     </div>
+
+
+
+    <script>
+        let btn = document.getElementById('switch');
+        let htmlTag = document.getElementById('htmlTag');
+
+        btn.addEventListener("click", () => {
+            htmlTag.classList.toggle('dark');
+        })
+    </script>
   </body>
 </html>
